@@ -17,19 +17,85 @@ html {
   box-sizing: inherit;
 }
 
-section .photo img {
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img {
   width: 100%;
   display: block;
 }
 
+body {
+  margin: 0;
+}
+
 @media only screen and (min-width: 20em) {
 
-section .photo img {
-  width: 100%;
+  section .photo img {
+    width: 100%;
+  }
+
+  section .photo:nth-child(2), .photo:nth-child(5) {
+    display: none;
+  }
+
 }
 
-section .photo:nth-child(2), .photo:nth-child(5) {
-  display: none;
+@media only screen and (min-width: 25em) {
+
+  section .photo:nth-child(2), .photo:nth-child(5) {
+    display: block;
+  }
+
+  section .photo:nth-child(2),
+  .photo:nth-child(3),
+  .photo:nth-child(4),
+  .photo:nth-child(5) {
+    width: 50%;
+  }
+
+  section .photo:nth-child(1) {
+    display: block;
+    width: 100%;
+  }
+
 }
+
+@media only screen and (min-width: 38em) {
+
+  section .photo:nth-child(2),
+  .photo:nth-child(3),
+  .photo:nth-child(4),
+  .photo:nth-child(1) {
+    width: 33.3333%;
+  }
+
+  section .photo:nth-child(5) {
+    display: none;
+  }
+
+}
+
+@media only screen and (min-width: 60em) {
+
+  section .photo:nth-child(5) {
+    display: block;
+  }
+
+  section .photo:nth-child(1),
+  .photo:nth-child(2),
+  .photo:nth-child(3),
+  .photo:nth-child(4),
+  .photo:nth-child(5) {
+    width: 66.6666%;
+  }
+
+  section .photo:nth-child(3),
+  .photo:nth-child(4),
+  .photo:nth-child(5) {
+    width: 33.3333%;
+  }
 
 }
